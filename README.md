@@ -6,4 +6,7 @@
 5.  and in show.jsp we have a submit button which sign out the user and redirect the page to the signin.jsp.
 
 Table used is User_Reg in oracledb.
-User data is a object named as Person class and each Person object is stored in ListUser list.
+User data is a object named as Person class  
+each Person object is stored in ListUser list.
+The servcice used to send sms is txtlocal messanger in SendSms.java.
+
