@@ -10,3 +10,5 @@ User data is a object named as Person class
 each Person object is stored in ListUser list.
 The servcice used to send sms is txtlocal messanger in SendSms.java.
 
+
+Please find the .jsp in the JSP Subdirectory in User_Regist.
