@@ -16,7 +16,9 @@ public class ListUser {
 List<Person> ListUser;
 void insertDB(Person P)
 {
-	DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
+	try
+	{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
 	String mysqlUrl = "jdbc:mysql://localhost/UserRegist";
 	Connection con = DriverManager.getConnection(mysqlUrl, "User","User123");
 	System.out.println("Connection established......");
@@ -42,17 +44,18 @@ void insertDB(Person P)
 	}catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-	}
-			
+	}catch (Exception e) {
+			System.out.println("The Exception during the connecting to db" +e.getMessage());
+}		
 Person getRecord(String username,String password)
 {
 	//Iterator<Person> it1=ListUser.listIterator();
 	int length =ListUser.size();
 	for(int i=0;i<length;i++){
 	
-		if((i.getUsername().equals(username)) && (i.getPassword().equals(password)))
+		if((ListUser.get(i).getUsername().equals(username)) && (ListUser.get(i).getPassword().equals(password)))
 		{
-			return i;
+			return ListUser.get(i);
 		}
 	
 	}
