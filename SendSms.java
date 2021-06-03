@@ -17,7 +17,7 @@ public class Sendsms {
 	OTP = rand.nextInt(999999);
 	String message = "&message=" + "This is your otp" + OTP;
 	String sender = "&sender=" + "TSN";
-	String numbers = "&numbers=" + "9535210911";
+	String numbers = "&numbers=" + phno;
 	
 	// Send data
 	HttpURLConnection conn = (HttpURLConnection) new URL("https://api.textlocal.in/send/?").openConnection();
