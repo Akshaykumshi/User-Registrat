@@ -10,11 +10,11 @@
 	My First JSP ${name} and password is ${password} 
 <form action="/login.do" method="GET">
 ${errormessage }
-Enter your name : <input type="text" name="username"><br>
-password : <input type="password" name="password"><br>
-Phone Number :<input type="number" name="Phone number"><br>
-Name : <input type="text" name="Name"><br>
-Date of Birth : <input type="date" name="DOB"><br>
+Enter your name : <input type="text" name="username" required/><br>
+password : <input type="password" name="password" required minimumlength=6/><br>
+Phone Number :<input type="number" name="Phone number" required minimumlength=10/><br>
+Name : <input type="text" name="Name" required minimumlength=3/><br>
+Date of Birth : <input type="date" name="DOB" required/><br>
 Address : <input type="text" name="Address"><br>
 <input type="submit" value="login">
 </form>
